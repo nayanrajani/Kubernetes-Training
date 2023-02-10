@@ -1,0 +1,26 @@
+root@worker-node2:~# history
+    1  sudo hostnamectl set-hostname worker-node2
+    2  exit
+    3  clear
+    4  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installDocker.sh -P /tmp
+    5  sudo chmod 755 /tmp/installDocker.sh
+    6  sudo bash /tmp/installDocker.sh
+    7  kubectl get nodes
+    8  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+    9  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installCRIDockerd.sh -P /tmp
+   10  sudo chmod 755 /tmp/installCRIDockerd.sh
+   11  sudo bash /tmp/installCRIDockerd.sh
+   12  sudo systemctl restart cri-docker.service
+   13  sudo chmod 755 /tmp/installK8S.sh
+   14  sudo bash /tmp/installK8S.sh
+   15  kubeadm join 172.31.4.102:6443 --cri-socket unix:///var/run/cri-dockerd.sock --token 33kq9w.gkhum53dq7xyqanq --discovery-token-ca-cert-hash sha256:b89c4ab5eb9c08f66dbabfee21d36f99402961b569543ba3dda2100580648b79
+   16  kubectl get nodes
+   17  kubeadm join 172.31.4.102:6443 --cri-socket unix:///var/run/cri-dockerd.sock --token prcwy1.sqx24z0ozthj9e63 --discovery-token-ca-cert-hash sha256:b89c4ab5eb9c08f66dbabfee21d36f99402961b569543ba3dda2100580648b79
+   18  kubectl get pods -o wide
+   19  docker pull nginx
+   20  docker run nginx
+   21  docker run -d nginx:latest
+   22  echo "set paste" > $HOME/.vimrc
+   23  curl 3.236.18.43:300
+   24  curl 3.236.18.43:3000
+   25  history

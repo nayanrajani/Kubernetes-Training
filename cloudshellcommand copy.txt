@@ -1,0 +1,60 @@
+ 1  id
+    2  kubectl get nodes
+    3  kubectl get pods
+    4  aws eks --region us-east-1 update-kubeconfig --name nayan-k8s
+    5  kubectl get nodes
+    6  aws configure
+    7  kubectl get nodes
+    8  kubectl get pods
+    9  clr
+   10  clear
+   11  ls
+   12  ssh -i Nayan-Kubernetes-lab.pem ubuntu@34.205.166.37
+   13  clear
+   14  ssh -i Nayan-Kubernetes-lab.pem ubuntu@34.205.166.37
+   15  ls -l
+   16  chmod 400 Nayan-Kubernetes-lab.pem
+   17  ls -l
+   18  ssh -i Nayan-Kubernetes-lab.pem ubuntu@34.205.166.37
+   19  aws sts-get-caller-identity
+   20  aws sts get-caller-identity
+   21  exit
+   22  aws sts get-caller-identity
+   23  cd .aws/
+   24  ls -l
+   25  rm credentials 
+   26  rm config 
+   27  exit
+   28  aws sts get-caller-identity
+   29  kubectl get nodes
+   30  aws eks --region us-east-1 update-kubeconfig --name nayan-k8s
+   31* kubectl get 
+   32  kubectl get nodes -wide -o
+   33  kubectl get pods -o wide -A
+   34  kubectl get cm aws-auth -n kube-system -o yaml &gt; aws-auth.yaml
+   35  kubectl get cm aws-auth -n kube-system -o yaml > aws-auth.yaml
+   36  vi aws-auth.yaml 
+   37  kubectl apply -f aws-auth.yaml
+   38  kubectl get pods -o wide -A
+   39  aws eks --region us-east-1 update-kubeconfig --name venkatesh-eks
+   40  aws eks --region us-east-1 update-kubeconfig --name venkatesh-k8s
+   41* 
+   42  aws eks --region us-east-1 update-kubeconfig --name venkatesh-k8s
+   43  kubectl get nodes
+   44  kubectl get cm aws-auth -n kube-system -o yaml > aws-auth.yaml
+   45  vi aws-auth.yaml 
+   46  kubectl apply -f aws-auth.yaml
+   47  vi aws-auth.yaml 
+   48  kubectl apply -f aws-auth.yaml
+   49  rm .kube/*
+   50  aws eks --region us-east-1 update-kubeconfig --name venkatesh-k8s
+   51  vi aws-auth.yaml 
+   52  kubectl apply -f aws-auth.yaml
+   53  vi aws-auth.yaml 
+   54  kubectl apply -f aws-auth.yaml
+   55  rm .kube/*
+   56  aws eks --region us-east-1 update-kubeconfig --name sanket-k8s-new
+   57  vi aws-auth.yaml 
+   58  kubectl apply -f aws-auth.yaml
+   59  history
+[cloudshell-user@ip-10-4-54-66 ~]$ 

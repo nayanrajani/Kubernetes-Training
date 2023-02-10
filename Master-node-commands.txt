@@ -1,0 +1,519 @@
+root@master-node:~# history
+    1  docker pull jenkins
+    2  exit
+    3  docker ps -a
+    4  docker run -d -p 9080:8080 jenkins:2.60.3-alpine
+    5  docker exec -it 01a35e4ad6dc /bin/bash
+    6  docker exec -it 01a35e4ad6dc java -version
+    7  docker ps -a
+    8  cd /usr/local/src/
+    9  cd..
+   10  exit
+   11  ls -l
+   12  rm apache-tomcat-9.0.63.tar.gz.1
+   13  rm apache-tomcat-9.0.63.tar.gz
+   14  rm jdk-8u331-linux-x64.tar.gz
+   15  rm jdk-8u331-linux-x64.tar.gz.1
+   16  rm sampleapp
+   17  rm sampleapp.war
+   18  rm sampleapp.war.1
+   19  ls l
+   20  ls -l
+   21  hostname master-node
+   22  ls -l
+   23  sudo hostnamectl set-hostname master-node
+   24  exit
+   25  wget https://github.com/lerndevops/code/raw/main/jdk-8u331-linux-x64.tar.gz
+   26  wget https://github.com/lerndevops/code/raw/main/apache-tomcat-9.0.63.tar.gz
+   27  wget https://github.com/lerndevops/code/raw/main/sampleapp.war
+   28  ls -l
+   29  docker pull ubuntu:18.04
+   30  docker image ls
+   31  tar -xzf jdk-8u331-linux-x64.tar.gz
+   32  ls -l
+   33  rm -r jdk1.8.0_331/
+   34  ls -l
+   35  clear
+   36  docker image ls
+   37  docker run -d -P tomcat:8.5.45
+   38  docker ps
+   39  docker image inspect tomcat:8.5.45
+   40  clear
+   41  vi sampleapdfile
+   42  ls -l
+   43  pwd
+   44  cat sampleapdfile
+   45  docker build --file sampleapp --tag sampleapp:v1
+   46  docker build --file sampleapp --tag sampleapp:v1 /tmp
+   47  docker build --file sampleapp --tag sampleapp:v1 /root
+   48  ls -l
+   49  docker ps
+   50  docker ps -a
+   51  docker rm af53e7606567
+   52  docker rm 9dc171fe5c6c 25c6a486ac78 2ddb552e51e9 880f7edbaee4 fa0b38dc02f1 1c0cebe40f25 a3808163d9c4 02440db56fda 88f1dec00931 fde8f2527f09 4ad81548c9c5 af53e7606567 1b73111903c8
+   53  docker stop af53e7606567
+   54  docker ps -a
+   55  docker stop 1b73111903c8
+   56  docker ps -a
+   57  docker rm 1b73111903c8
+   58  docker build --file sampleapp --tag sampleapp:v1 /root
+   59  docker build --file sampleapdfile --tag sampleapp:v1 /root
+   60  vi sampleapdfile
+   61  docker build --file sampleapdfile --tag sampleapp:v1 /root
+   62  docker ps -a
+   63  docker ps
+   64  sudo su -
+   65  sudo su-
+   66  sudo su -
+   67  clear
+   68  docker image ls
+   69  docker login
+   70  docker build --file sampleapdfile --tag docker.io/boogeyman98
+   71  docker build --file sampleapdfile --tag docker.io/boogeyman98/nayan_kubernetes:v1 /root
+   72  docker image ls
+   73  docker push docker.io/boogeyman98/nayan_kubernetes:v1
+   74  docker push boogeyman98/nayan_kubernetes:v1
+   75  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installCRIDockerd.sh -P /tmp
+   76  sudo chmod 755 /tmp/installCRIDockerd.sh
+   77  sudo bash /tmp/installCRIDockerd.sh
+   78  sudo systemctl restart cri-docker.service
+   79  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+   80  sudo chmod 755 /tmp/installK8S.sh
+   81  sudo bash /tmp/installK8S.sh
+   82  cri-dockerd --version
+   83  kubeadm version -o short
+   84  kubelet --version
+   85  kubectl version --short --client
+   86  sudo mkdir -p $HOME/.kube
+   87  kubectl get nodes
+   88  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   89  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   90  kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml
+   91  kubectle get nodes
+   92  kubectl get nodes
+   93  ping google.com
+   94  kubectl get nodes
+   95  kubectl get pods --all-namespaces
+   96  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+   97  sudo chmod 755 /tmp/installK8S.sh.1
+   98  sudo bash /tmp/installK8S.sh.1
+   99  ls -l
+  100  kubectl get node
+  101  kubectl get nodes
+  102  sudo mkdir -p $HOME/.kube
+  103  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  104  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  105  kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml
+  106  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+  107  kubectl get nodes
+  108  kubectl get pods --all-namespaces
+  109  kubeadm token create --print-join-command
+  110  kubectl get nodes
+  111  kubeadm token create --print-join-command
+  112  kubectl get nodes
+  113  kubectl get pods -o wide
+  114  kubectl run webapppod --image=nginx
+  115  kubectl get pods -o wide
+  116  kubectl run webapppod1 --image=nginx
+  117  kubectl get pods -o wide
+  118  kubectl run dbpod --image=mongo
+  119  kubectl get pods -o wide
+  120  kubectl describe pod webapppod
+  121  kubectl exec -it webapppod -- /bin/bash
+  122  kubectl exec webapppod -- nginx -v
+  123  kubectl get pods -o wide --all-namespaces
+  124  kubectl get namespaces
+  125  kubectl create namespace teama
+  126  kubectl create namespace teamb
+  127  kubectl get namespaces
+  128  kubectl get pods -o wide
+  129  kubectl get pods -o wide --namespace default
+  130  kubectl get pods -o wide --namespace kube-system
+  131  kubectl get pods -o wide --namespace teama
+  132  kubectl delete pod pod1 --namespace teama
+  133  kubectl get pods -o wide
+  134  kubectl get namespaces
+  135  vi multi.yaml
+  136  kubectl apply -f multi.yaml
+  137  nano multi.yaml
+  138  kubectl apply -f multi.yaml
+  139  nano multi.yaml
+  140  kubectl apply -f multi.yaml
+  141  kubectl apply --filename multi.yaml
+  142  kubectl apply -f multi.yaml
+  143  nano multi.yaml
+  144  kubectl apply -f multi.yaml
+  145  kubectl get pods -o wide
+  146  curl 192.168.203.132:80
+  147  curl 192.168.203.132:8080
+  148  curl 192.168.203.132:27017
+  149  curl 192.168.203.132
+  150  curl 192.168.203.132:8080
+  151  curl 192.168.203.132:80
+  152  kubectl logs multi-cont-pod -c cont1
+  153  kubectl get pods -o wide -n default
+  154  kubectl logs multi-cont-pod
+  155  kubectl logs multi-cont-pod -c cont1
+  156  kubectl exec -it multi-cont-pod -c cont1 -- /bin/bash
+  157  kubectl exec -it multi-cont-pod -c abc -- /bin/bash
+  158  kubectl logs multi-cont-pod -c cont3
+  159  echo "set paste" > $HOME/.vimrc
+  160  apt install unzip
+  161  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  162  unzip awscliv2.zip
+  163  sudo ./aws/install
+  164  /usr/local/bin/aws --version
+  165  aws configure
+  166  aws sts get-caller-identity
+  167  aws eks --region use-east-1 update-kubeconfig --name nayan-kubernetes
+  168  aws eks --region us-east-1 update-kubeconfig --name nayan-kubernetes
+  169  kubectl get nodes
+  170  rm /root/.kube/config
+  171  eksctl create cluster --name nayan-k8s --node-type t3.medium --nodegroup-name ng1
+  172  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+  173  sudo mv /tmp/eksctl /usr/local/bin
+  174  eksctl version
+  175  eksctl create cluster --name nayan-k8s --node-type t3.medium --nodegroup-name ng1
+  176  vi cluster.yaml
+  177  kubectl get nodes
+  178  kubectl get pod
+  179  kubectl get pods
+  180  history
+  181  kubectl get pods
+  182  kubectl get nodes
+  183  exit
+  184  aws eks --region us-east-1 update-kubeconfig --name nayan-k8s
+  185  kubectl get nodes
+  186  kubectl get pods -A
+  187  ls -l
+  188  cd aws/
+  189  ls -l
+  190  exit
+  191  cd .aws/
+  192  ls -l
+  193  rm config credentials
+  194  ls -l
+  195  exit
+  196  kubectl get pods -A
+  197  aws configure
+  198  eksctl delete cluster --name nayan-k8s
+  199  cd .aws/
+  200  rm config credentials
+  201  ls -l
+  202  exit
+  203  aws --version
+  204  aws configure
+  205  aws sts get-caller-identity
+  206  aws eks --region us-east-1 update-kubeconfig --name nayan-k8s
+  207  kubectl get nodes
+  208  kubectl get pods
+  209  kubectl get pods -o wide -A
+  210  vi rs.yaml
+  211  ls -l
+  212  cat rs.yaml
+  213  nano rs.yaml
+  214  ls -l
+  215  rm apache-tomcat-9.0.63.tar.gz jdk-8u331-linux-x64.tar.gz sampleapp.war awscliv2.zip
+  216  ls -l
+  217  vi rs.yaml
+  218  rm rs.yaml
+  219  ls -l
+  220  clear
+  221  vi rs.yaml
+  222  cat rs.yaml
+  223  kubectl apply -f rs.yaml
+  224  vi rs.yaml
+  225  kubectl apply -f rs.yaml
+  226  nside pod
+  227  kubectl get replicaset -o wide
+  228  kubectl scale replicaset myapp --replicas 10
+  229  kubectl get replicaset -o wide
+  230  kubectl get pods -o wide --show-labels
+  231  kubectl scale replicaset myapp --replicas 3
+  232  kubectl get pods -o wide --show-labels
+  233  kubectl delte pod myapp-4llwf myapp-ss79j myapp-x2tts
+  234  kubectl delete pod myapp-4llwf myapp-ss79j myapp-x2tts
+  235  kubectl get replicaset -o wide
+  236  kubectl run podx --image=lerndevops/samples:pyapp-v1 -l app=myapp
+  237  kubectl get pods --show-labels
+  238  kubectl run podx --image=lerndevops/samples:pyapp-v1 -l app=myapp
+  239  kubectl get pods --show-labels
+  240  kubectl delete rs myapp
+  241  kubectl run podx --image=lerndevops/samples:pyapp-v1 -l app=myapp
+  242  kubectl apply -f rs.yaml
+  243  vi ds.yaml
+  244  kubectl apply -f ds.yaml
+  245  kubectl get daemonset -o wide
+  246  kubectl get pods -o wide
+  247  kubectl scale deamonset myds --replicas 8
+  248  cat ds.yaml
+  249  kubectl scale DeamonSet myds --replicas 8
+  250  kubectl get pod -o wide --show-labels
+  251  vi svc.yaml
+  252  kubectl apply -f svc.yaml
+  253  kubectl get pod -o wide --show-labels -l app=myapp
+  254  kubectl describe service myapp
+  255  kubectl get nodes -o wide
+  256  curl 172.31.10.206:3000
+  257  curl 172.31.19.86:3000
+  258  curl 172.31.19.86:80
+  259  kubectl delete service myapp
+  260  curl 172.31.74.61:80
+  261  curl 172.31.74.61:3000
+  262  curl 3.236.18.43:3000
+  263  curl 3.236.18.43:80
+  264  kubectl describe service myapp
+  265  kubectl get pod -o wide --show-labels -l app=myapp
+  266  kubectl describe service myapp
+  267  kubectl apply -f svc.yaml
+  268  kubectl describe service myapp
+  269  url 172.31.18.120:3000
+  270  curl 172.31.18.120:3000
+  271  curl 172.31.18.120:80
+  272  cat svc.yaml
+  273  kubectl scale replicaset myapp --replicas 8
+  274  kubectl scale replicaset myapp --replicas 4
+  275  curl 172.31.18.120:3000
+  276  kubectl scale replicaset myapp --replicas 4
+  277  curl 172.31.18.120:3000
+  278  clear
+  279  vi deployment.yaml
+  280  kubectl apply -f deployment.yaml
+  281  kubectl get deployment -o wide
+  282  kubectl get pods -o wide
+  283  kubectl get repicaset -o wide
+  284  kubectl get replicaset -o wide
+  285  kubectl rollout status deployment kubeserve
+  286  kubectl rollout undo deployment kubeserve
+  287  kubectl rollout history deployment kubeserve
+  288  vi pod.yaml
+  289  kubectl apply -f pod.yaml
+  290  kubectl get pods -o wide
+  291  cat pod.yaml
+  292  kubectl describe pod multi-cont-pod
+  293  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-
+  294  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-backup.yaml
+  295  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-bakup.yaml
+  296  cat pod.yaml
+  297  kubectl describe pod etcd
+  298  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-bakup.yaml
+  299  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-
+  300  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/3-controllers/jobs/etcd-bakup.yaml
+  301  kubectl get pods -o wide
+  302  kubectl get services
+  303  kubectl get jobs
+  304  kubectl describe pod backup-etcd-job
+  305  kubectl delete deployment --all
+  306  kubectl delete jobs --all
+  307  kubectl delete pods --all
+  308  history
+  309  vi nfs-dep.yaml
+  310  kubectl apply -f nfs-dep.yaml
+  311  kubectl get pv,pvc
+  312  kubectl get pods
+  313  kubectl get pv,pvc
+  314  kubectl get pods -o wide
+  315  ls -l /mnt/appdata/
+  316  kubectl exec -it pv-nfsvol-dep-84698757fd-cccw4 -- /bin/bash
+  317  kubectl exec -it pv-nfsvol-dep-84698757fd-mkh6f -- /bin/bash
+  318  kubectl exec -it pv-nfsvol-dep-84698757fd-phgk9 -- /bin/bash
+  319  ls -l
+  320  ls -l /mnt/appdata/
+  321  touch /mnt/appdata/index.html
+  322  kubectl get pods -o wide
+  323  kubectl exec -it pv-nfsvol-dep-84698757fd-phgk9 -- /bin/bash
+  324  kubectl exec -it pv-nfsvol-dep-84698757fd-mkh6f -- /bin/bash
+  325  kubectl get pods -o wide
+  326  kubectl get pods -o wide -ALL
+  327  kubectl delete pv-nfsvol-dep-84698757fd-mkh6f
+  328  kubectl apply -f nfs-dep.yaml
+  329  kubectl get pv,pvc
+  330  ls -l
+  331  kubectl get pods -o wide
+  332  kubectl delete pod -all
+  333  kubectl delete pod --all
+  334  kubectl apply -f nfs-dep.yaml
+  335  kubectl get pods -o wide
+  336  kubectl exec -it pv-nfsvol-dep-84698757fd-8kdcj -- /bin/bash
+  337  kubectl delete pv
+  338  kubectl delete pv --all
+  339  kubectl delete pvc --all
+  340  kubectl get pods -o wide
+  341  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn -- /bin/bash
+  342  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn
+  343  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn -- /bin/
+  344  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn -- /bin/bash/
+  345  ls -l /mnt/appdata/
+  346  cd /mnt/appdata
+  347  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn -- /bin/bash/
+  348  history
+  349  kubectl scale replicaset myapp --replicas 2
+  350  kubectl get pods -o wide
+  351  kubectl scale replicaset myapp --replicas 1
+  352  kubectl get pods -o wide
+  353  ls -l
+  354  kubectl delete service myapp
+  355  ls -l
+  356  kubectl get pods -o wide
+  357  kubectl delete pods -o wide --all
+  358  kubectl delete pods -o wide --a
+  359  kubectl delete pods --all
+  360  kubectl get pods -o wide
+  361  kubectl apply -f nfs-dep.yaml
+  362  kubectl get pods -o wide
+  363  kubectl exec -it pv-nfsvol-dep-84698757fd-shmx9 -- /bin/bash/
+  364  kubectl start  pods -o wide
+  365  kubectl exec -it pv-nfsvol-dep-84698757fd-bkkpn -- /bin/bash
+  366  kubectl exec -it pv-nfsvol-dep-84698757fd-tpvr6 -- /bin/bash
+  367  kubectl exec -it pv-nfsvol-dep-84698757fd-shmx9 -- /bin/bash
+  368  kubectl get pods -o wide
+  369  kubectl delete pods myds-f66j7
+  370  kubectl get pods -o wide
+  371  kubectl get pods -o wide -A
+  372  kubectl get pv,pvc
+  373  kubectl delete pods --all
+  374  kubectl get pods -o wide -A
+  375  vi nfs.yaml
+  376  kubectl apply -f nfs.yaml
+  377  kubectl get pods -o wide -A
+  378  kubectl delete pods pv-nfsvol-dep-84698757fd-9hznq pv-nfsvol-dep-84698757fd-r2kls
+  379  kubectl get pods -o wide -
+  380  kubectl delete pods kube-proxy-h8m2d kube-proxy-wd7qh
+  381  sudo su -
+  382  kubectl delete deployment --all
+  383  kubectl delete sc gp2
+  384  kubectl get pods -o wide -A
+  385  ls -l
+  386  kubectl apply -f nfs.yaml
+  387  kubectl get pods -o wide -A
+  388  kubectl delete pvc --all
+  389  kubectl delete deployment --all
+  390  kubectl delete pv --all
+  391  kubectl get pods -o wide -A
+  392  clear
+  393  kubectl create configmap devdbconfig --from-literal=DBHOST=&quot;10.5.6.7&quot; --from-literal=DBPORT=&quot;1521&quot; --
+  394  kubectl create configmap devdbconfig --from-literal=DBHOST=&quot;10.5.6.7&quot; --from-literal=DBPORT=&quot;1521&quot; --from-literal=DBNAME=devdb
+  395  kubectl create configmap devdbconfig --from-literal=DBHOST="10.5.6.7" --from-literal=DBPORT="1521" --from-literal=DBNAME=devdb
+  396  kubectl create configmpa filecm --from-file=/root/ds.yaml --from-file=/etc/resolv.conf
+  397  kubectl get configmap
+  398  kubectl get cm
+  399  vi cm-dep1.yaml
+  400  kubectl apply -f cm-dep1.yaml
+  401  kubectl get pods -o wide
+  402  kubectl exec -it cm-as-env-data-dep-b8c89754-4b9p7 -- /bin/bash
+  403  kubectl exec cm-as-env-data-dep-b8c89754-4b9p7 -- printenv
+  404  kubectl exec -it cm-as-env-data-dep-b8c89754-4b9p7 -- /bin/bash
+  405  kubectl describe configmap
+  406  kubectl describe configmap qadbconfig
+  407  kubectl get cm
+  408  kubectl apply -f nfs-dep.yaml
+  409  kubectl get pv,pvc
+  410  kubectl get pods
+  411  kubectl exec -it pv-nfsvol-dep-84698757fd-nlxxx -- /bin/bash
+  412  clear
+  413  vi sec-dev.yaml
+  414  kubectl apply -f sec-dev.yaml
+  415  kubectl get pods -o wide
+  416  kubectl exec -it sec-as-vol-data-dep-7fdd799f88-zbwmt -- ls -l /dbcred
+  417  kubectl get pods -o wide
+  418  kubectl exec -it sec-as-vol-data-dep-7fdd799f88-zbwmt -- ls -l /dbcred
+  419  vi sec-dev.yaml
+  420  rm sec-dev.yaml
+  421  kubectl delete deployment --all
+  422  vi secret.yaml
+  423  cat secret.yaml
+  424  rm secret.yaml
+  425  nano mysecret.yaml
+  426  ls -l
+  427  rm cluster.yaml cm-dep1.yaml deployment.yaml sampleapdfile svc.yaml
+  428  rm pod.yaml nfs-dep.yaml nfs.yaml mysecret.yaml multi.yaml ds.yaml
+  429  vi secret.yaml
+  430  exit
+  431  ls -l
+  432  rmDock
+  433  rm Dockerfile
+  434  rm rs.yaml
+  435  rm secret.yaml
+  436  exit
+  437  vi sec-dep.yaml
+  438  vi secret.yaml
+  439  rm secret.yaml
+  440  rm sec-dep.yaml
+  441  vi cj.yaml
+  442  ls -l
+  443  df -h
+  444  df -h /
+  445  docker ps -a
+  446  docker system prun
+  447  docker system prune
+  448  df -h /
+  449  rm aws/
+  450  ls -l
+  451  rm -r aws
+  452  ls -a
+  453  rm cj.yaml
+  454  vi cj.yaml
+  455  vi sec.yaml
+  456  kubectl apply -f sec.yaml
+  457  kubectl apply -f sec.yaml
+  458  vi sec.yaml
+  459  rm cj.yaml
+  460  rm sec.yaml
+  461  vi sec.yaml
+  462  kubectl apply -f sec.yaml
+  463  kubectl get pods -o wide
+  464  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l /dbcred
+  465  kubectl exec sec-as-env-data-dep-77594668cd-cws4p -- ls -l /dbcred
+  466  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l /dbcred/sec.yaml
+  467  cat sec.yaml
+  468  kubectl get pods -o wide
+  469  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l /dbcred/sec.yaml
+  470  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l
+  471  kubectl exec -it sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l
+  472  env
+  473  kubectl exec -it sec-as-env-data-dep-77594668cd-4zfw6 -- env
+  474  kubectl exec -it sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l
+  475  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- env
+  476  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l /dbcred/sec.yaml
+  477  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l /dbcred
+  478  kubectl exec sec-as-env-data-dep-77594668cd-4zfw6 -- ls -l/
+  479*
+  480  kubectl get pods -o wide
+  481  kubectl exec sec-as-vol-data-dep-7fdd799f88-9m42l -- ls -l
+  482  kubectl exec sec-as-vol-data-dep-7fdd799f88-9m42l -- ls -l /dbcred/
+  483  kubectl exec sec-as-vol-data-dep-7fdd799f88-9m42l -- ls -l /dbcred/cj.yaml
+  484  Kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/examples/springboot-mongo-app.yml
+  485  kubectl get pods -o wide
+  486  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/examples/springboot-mongo-app.yml
+  487  kubectl get pods -o wide
+  488  kubectl get pods -o wide -A
+  489  kubectl get pods -P -o wide -A
+  490  kubectl describe springboot-app-5699498d67-8g5ms
+  491  kubectl inspect springboot-app-5699498d67-8g5ms
+  492  kubectl get pods -o wide -A
+  493  kubectl get pods -o wide
+  494  kubectl get pod
+  495  kubectl get pod -help
+  496  kubectl get --help
+  497  kubectl describe pod springboot-app-5699498d67-8g5ms
+  498  curl 3.237.45.62:8080
+  499  curl :8080
+  500  curl 172.31.70.88:8080
+  501  clear
+  502  kubectl apply -f https://raw.githubusercontent.com/aws/amazon-vpc-cni-k8s/master/config/master/calico-operator.yaml
+  503  kubectl apply -f https://raw.githubusercontent.com/aws/amazon-vpc-cni-k8s/master/config/master/calico-crs.yaml
+  504  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/examples/springboot-mongo-app.yml
+  505  kubectl get pods -o wise
+  506  kubectl get pods -o wide
+  507  kubectl create namespace test
+  508  kubectl apply -f https://raw.githubusercontent.com/lerndevops/educka/master/6-networking/core-dns/app-dnstest.yml -n test
+  509  vi mongodb-netpol.yaml
+  510  kubectl apply -f mongodb-netpol.yaml
+  511  kubectl get pods -o wide
+  512  kubectl exec -it springboot-app-5699498d67-8g5ms -n default -- /bin/sh
+  513  kubectl exec -it springboot-app-5699498d67-9n9df -n test -- /bin/sh
+  514  kubectl get pods -o wide -A
+  515  kubectl exec -it nettest-5dd944d4b-tzjl9 -n test -- /bin/sh
+  516  kubectl get pods -o wide -A
+  517  kubectl get pods -n test
+  518  history
