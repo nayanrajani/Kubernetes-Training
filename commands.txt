@@ -1,0 +1,181 @@
+root@master-node:~# history
+    1  docker pull jenkins
+    2  exit
+    3  docker ps -a
+    4  docker run -d -p 9080:8080 jenkins:2.60.3-alpine
+    5  docker exec -it 01a35e4ad6dc /bin/bash
+    6  docker exec -it 01a35e4ad6dc java -version
+    7  docker ps -a
+    8  cd /usr/local/src/
+    9  cd..
+   10  exit
+   11  ls -l
+   12  rm apache-tomcat-9.0.63.tar.gz.1
+   13  rm apache-tomcat-9.0.63.tar.gz
+   14  rm jdk-8u331-linux-x64.tar.gz
+   15  rm jdk-8u331-linux-x64.tar.gz.1
+   16  rm sampleapp
+   17  rm sampleapp.war
+   18  rm sampleapp.war.1
+   19  ls l
+   20  ls -l
+   21  hostname master-node
+   22  ls -l
+   23  sudo hostnamectl set-hostname master-node
+   24  exit
+   25  wget https://github.com/lerndevops/code/raw/main/jdk-8u331-linux-x64.tar.gz
+   26  wget https://github.com/lerndevops/code/raw/main/apache-tomcat-9.0.63.tar.gz
+   27  wget https://github.com/lerndevops/code/raw/main/sampleapp.war
+   28  ls -l
+   29  docker pull ubuntu:18.04
+   30  docker image ls
+   31  tar -xzf jdk-8u331-linux-x64.tar.gz
+   32  ls -l
+   33  rm -r jdk1.8.0_331/
+   34  ls -l
+   35  clear
+   36  docker image ls
+   37  docker run -d -P tomcat:8.5.45
+   38  docker ps
+   39  docker image inspect tomcat:8.5.45
+   40  clear
+   41  vi sampleapdfile
+   42  ls -l
+   43  pwd
+   44  cat sampleapdfile
+   45  docker build --file sampleapp --tag sampleapp:v1
+   46  docker build --file sampleapp --tag sampleapp:v1 /tmp
+   47  docker build --file sampleapp --tag sampleapp:v1 /root
+   48  ls -l
+   49  docker ps
+   50  docker ps -a
+   51  docker rm af53e7606567
+   52  docker rm 9dc171fe5c6c 25c6a486ac78 2ddb552e51e9 880f7edbaee4 fa0b38dc02f1 1c0cebe40f25 a3808163d9c4 02440db56fda 88f1dec00931 fde8f2527f09 4ad81548c9c5 af53e7606567 1b73111903c8
+   53  docker stop af53e7606567
+   54  docker ps -a
+   55  docker stop 1b73111903c8
+   56  docker ps -a
+   57  docker rm 1b73111903c8
+   58  docker build --file sampleapp --tag sampleapp:v1 /root
+   59  docker build --file sampleapdfile --tag sampleapp:v1 /root
+   60  vi sampleapdfile
+   61  docker build --file sampleapdfile --tag sampleapp:v1 /root
+   62  docker ps -a
+   63  docker ps
+   64  sudo su -
+   65  sudo su-
+   66  sudo su -
+   67  clear
+   68  docker image ls
+   69  docker login
+   70  docker build --file sampleapdfile --tag docker.io/boogeyman98
+   71  docker build --file sampleapdfile --tag docker.io/boogeyman98/nayan_kubernetes:v1 /root
+   72  docker image ls
+   73  docker push docker.io/boogeyman98/nayan_kubernetes:v1
+   74  docker push boogeyman98/nayan_kubernetes:v1
+   75  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installCRIDockerd.sh -P /tmp
+   76  sudo chmod 755 /tmp/installCRIDockerd.sh
+   77  sudo bash /tmp/installCRIDockerd.sh
+   78  sudo systemctl restart cri-docker.service
+   79  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+   80  sudo chmod 755 /tmp/installK8S.sh
+   81  sudo bash /tmp/installK8S.sh
+   82  cri-dockerd --version
+   83  kubeadm version -o short
+   84  kubelet --version
+   85  kubectl version --short --client
+   86  sudo mkdir -p $HOME/.kube
+   87  kubectl get nodes
+   88  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   89  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   90  kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml
+   91  kubectle get nodes
+   92  kubectl get nodes
+   93  ping google.com
+   94  kubectl get nodes
+   95  kubectl get pods --all-namespaces
+   96  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+   97  sudo chmod 755 /tmp/installK8S.sh.1
+   98  sudo bash /tmp/installK8S.sh.1
+   99  ls -l
+  100  kubectl get node
+  101  kubectl get nodes
+  102  sudo mkdir -p $HOME/.kube
+  103  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  104  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  105  kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml
+  106  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installK8S.sh -P /tmp
+  107  kubectl get nodes
+  108  kubectl get pods --all-namespaces
+  109  kubeadm token create --print-join-command
+  110  kubectl get nodes
+  111  kubeadm token create --print-join-command
+  112  kubectl get nodes
+  113  kubectl get pods -o wide
+  114  kubectl run webapppod --image=nginx
+  115  kubectl get pods -o wide
+  116  kubectl run webapppod1 --image=nginx
+  117  kubectl get pods -o wide
+  118  kubectl run dbpod --image=mongo
+  119  kubectl get pods -o wide
+  120  kubectl describe pod webapppod
+  121  kubectl exec -it webapppod -- /bin/bash
+  122  kubectl exec webapppod -- nginx -v
+  123  kubectl get pods -o wide --all-namespaces
+  124  kubectl get namespaces
+  125  kubectl create namespace teama
+  126  kubectl create namespace teamb
+  127  kubectl get namespaces
+  128  kubectl get pods -o wide
+  129  kubectl get pods -o wide --namespace default
+  130  kubectl get pods -o wide --namespace kube-system
+  131  kubectl get pods -o wide --namespace teama
+  132  kubectl delete pod pod1 --namespace teama
+  133  kubectl get pods -o wide
+  134  kubectl get namespaces
+  135  vi multi.yaml
+  136  kubectl apply -f multi.yaml
+  137  nano multi.yaml
+  138  kubectl apply -f multi.yaml
+  139  nano multi.yaml
+  140  kubectl apply -f multi.yaml
+  141  kubectl apply --filename multi.yaml
+  142  kubectl apply -f multi.yaml
+  143  nano multi.yaml
+  144  kubectl apply -f multi.yaml
+  145  kubectl get pods -o wide
+  146  curl 192.168.203.132:80
+  147  curl 192.168.203.132:8080
+  148  curl 192.168.203.132:27017
+  149  curl 192.168.203.132
+  150  curl 192.168.203.132:8080
+  151  curl 192.168.203.132:80
+  152  kubectl logs multi-cont-pod -c cont1
+  153  kubectl get pods -o wide -n default
+  154  kubectl logs multi-cont-pod
+  155  kubectl logs multi-cont-pod -c cont1
+  156  kubectl exec -it multi-cont-pod -c cont1 -- /bin/bash
+  157  kubectl exec -it multi-cont-pod -c abc -- /bin/bash
+  158  kubectl logs multi-cont-pod -c cont3
+  159  echo "set paste" > $HOME/.vimrc
+  160  apt install unzip
+  161  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  162  unzip awscliv2.zip
+  163  sudo ./aws/install
+  164  /usr/local/bin/aws --version
+  165  aws configure
+  166  aws sts get-caller-identity
+  167  aws eks --region use-east-1 update-kubeconfig --name nayan-kubernetes
+  168  aws eks --region us-east-1 update-kubeconfig --name nayan-kubernetes
+  169  kubectl get nodes
+  170  rm /root/.kube/config
+  171  eksctl create cluster --name nayan-k8s --node-type t3.medium --nodegroup-name ng1
+  172  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+  173  sudo mv /tmp/eksctl /usr/local/bin
+  174  eksctl version
+  175  eksctl create cluster --name nayan-k8s --node-type t3.medium --nodegroup-name ng1
+  176  vi cluster.yaml
+  177  kubectl get nodes
+  178  kubectl get pod
+  179  kubectl get pods
+  180  history
