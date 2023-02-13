@@ -73,6 +73,7 @@ root@master-node:~# history
    72  docker image ls
    73  docker push docker.io/boogeyman98/nayan_kubernetes:v1
    74  docker push boogeyman98/nayan_kubernetes:v1
+   Look- https://github.com/lerndevops/educka/blob/master/1-intall/install-kubernetes-v1.24-ubuntu-debian.md
    75  sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/installCRIDockerd.sh -P /tmp
    76  sudo chmod 755 /tmp/installCRIDockerd.sh
    77  sudo bash /tmp/installCRIDockerd.sh
